@@ -28,7 +28,7 @@ The 'Analyze Learn String' does not work.
 
 All the 'Get Trace', file download and PDF documentation works.
 
-FINAL FINALLY: The sqlite3 data base is saved at C:\Users\"you user name"\AppData\Roaming\hp8753c in a data base file hp8753c.db
+FINAL FINALLY: The sqlite3 data base is saved at C:\\Users\\"you user name"\\AppData\\Roaming\\hp8753c in a data base file hp8753c.db
 
 FINAL FINAL FINALLY: The logging part has not been used or tested. Enjoy.
 
