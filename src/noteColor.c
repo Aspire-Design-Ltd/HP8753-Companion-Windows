@@ -68,6 +68,7 @@ GdkRGBA plotElementColors[ eMAX_COLORS ];
  * \param  wColorBtn    color button widget
  * \param  pGlobal      pointer to data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_ColorBtn_HighResColor( GtkColorButton *wColorBtn , tGlobal *pGlobal)
 {
@@ -98,6 +99,7 @@ CB_ColorBtn_HighResColor( GtkColorButton *wColorBtn , tGlobal *pGlobal)
  * \param  wColorBtn    color button widget
  * \param  pGlobal      pointer to data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_ColorBtn_HPGLcolor( GtkColorButton *wColorBtn , tGlobal *pGlobal)
 {
@@ -128,6 +130,7 @@ CB_ColorBtn_HPGLcolor( GtkColorButton *wColorBtn , tGlobal *pGlobal)
  * \param  wHiResColorCombo    pointer to GtkComboBox widget
  * \param  tGlobal            pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_NC_ComboBox_HiResColor (GtkComboBoxText *wHiResColorCombo, tGlobal *pGlobal) {
     gint id = 0;
@@ -149,6 +152,7 @@ CB_NC_ComboBox_HiResColor (GtkComboBoxText *wHiResColorCombo, tGlobal *pGlobal) 
  * \param  wHiResColorCombo    pointer to GtkComboBox widget
  * \param  tGlobal            pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_NC_ComboBox_HPGLcolor (GtkComboBoxText *wHPGLcolorCombo, tGlobal *pGlobal) {
     gint id = 0;
@@ -209,6 +213,7 @@ setNotePageColorButton (tGlobal *pGlobal, gboolean bHiResOrHPGL ) {
  * \param  wButton  pointer to GtkButton widget
  * \param  tGlobal  pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_NC_BtnResetColors( GtkButton *wButton, tGlobal *pGlobal ) {
     GtkComboBox *wComboColorElement;

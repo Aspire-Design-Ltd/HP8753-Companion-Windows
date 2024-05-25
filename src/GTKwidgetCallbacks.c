@@ -29,6 +29,7 @@
 
 static GtkCssProvider *cssItalic;
 
+G_MODULE_EXPORT 			// Windows Mod
 void CB_RadioBtn_ScreenPlot (GtkRadioButton *wRadioBtn, tGlobal *pGlobal);
 
 /*!     \brief  set the combobox to the string (if found in list)
@@ -258,6 +259,7 @@ populateProjectComboBoxWidget( tGlobal * pGlobal ) {
  * \param wDrawingAreaA GtkDrawingArea widget pointer
  * \param pGlobal pointer to global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_DrawingArea_Plot_A_Realize (GtkDrawingArea * wDrawingAreaA, tGlobal *pGlobal)
 {
@@ -274,6 +276,7 @@ CB_DrawingArea_Plot_A_Realize (GtkDrawingArea * wDrawingAreaA, tGlobal *pGlobal)
  * \param wDrawingAreaB GtkDrawingArea widget pointer
  * \param pGlobal pointer to global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_DrawingArea_Plot_B_Realize (GtkDrawingArea * wDrawingAreaB, tGlobal *pGlobal)
 {
@@ -391,6 +394,7 @@ static gboolean bResize = FALSE, bFocus = FALSE;
  * \param pAllocation Allocation structure
  * \param pGlobal pointer to global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_AppSizeAllocate(   GtkWidget* wApp, GtkAllocation* pAllocation,
         tGlobal *pGlobal) {
@@ -414,6 +418,7 @@ CB_AppSizeAllocate(   GtkWidget* wApp, GtkAllocation* pAllocation,
  * \param pGlobal pointer to global data
  * \return  FALSE (propagate signal)
  */
+G_MODULE_EXPORT 			// Windows Mod
 gboolean
 CB_AppFocusIn(GtkWidget* wApp, GdkEventFocus* event, tGlobal *pGlobal){
     if( bResize ) {
@@ -436,6 +441,7 @@ CB_AppFocusIn(GtkWidget* wApp, GdkEventFocus* event, tGlobal *pGlobal){
  * \param pGlobal pointer to global data
  * \return  FALSE (propagate signal)
  */
+G_MODULE_EXPORT 			// Windows Mod
 gboolean
 CB_AppFocusOut(GtkWidget* wApp, GdkEventFocus* event, tGlobal *pGlobal){
     bFocus = FALSE;
@@ -451,6 +457,7 @@ CB_AppFocusOut(GtkWidget* wApp, GdkEventFocus* event, tGlobal *pGlobal){
  * \param pGlobal pointer to global data
  */
 void
+G_MODULE_EXPORT 			// Windows Mod
 CB_hp8753c_main_Realize (GtkApplicationWindow * wApplicationWindow, tGlobal *pGlobal)
 {
     cssItalic = gtk_css_provider_new ();
@@ -459,6 +466,7 @@ CB_hp8753c_main_Realize (GtkApplicationWindow * wApplicationWindow, tGlobal *pGl
 	visibilityFramePlot_B( pGlobal, FALSE );
 }
 
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_BtnRecall (GtkButton * button, tGlobal *pGlobal)
 {
@@ -542,6 +550,7 @@ CB_BtnRecall (GtkButton * button, tGlobal *pGlobal)
 }
 
 void
+G_MODULE_EXPORT 			// Windows Mod
 CB_BtnSave (GtkButton *wButton, tGlobal *pGlobal)
 {
 	GtkComboBoxText *wComboBoxName;
@@ -670,6 +679,7 @@ CB_BtnSave (GtkButton *wButton, tGlobal *pGlobal)
 }
 
 void
+G_MODULE_EXPORT 			// Windows Mod
 CB_BtnRemove (GtkButton * button, tGlobal *pGlobal)
 {
 	GtkComboBoxText *wCombo;
@@ -745,6 +755,7 @@ CB_BtnRemove (GtkButton * button, tGlobal *pGlobal)
 	g_free( sQuestion );
 }
 
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_BtnGetTrace (GtkButton * button, tGlobal *pGlobal)
 {
@@ -785,6 +796,7 @@ gboolean timer_handler(tGlobal *pGlobal)
 
 
 void
+G_MODULE_EXPORT 			// Windows Mod
 CB_EntryTitle_Changed (GtkEditable* wEditable, tGlobal *pGlobal)
 {
 	gchar *sTitle = gtk_editable_get_chars(wEditable, 0, -1);
@@ -797,6 +809,7 @@ CB_EntryTitle_Changed (GtkEditable* wEditable, tGlobal *pGlobal)
 
 
 void
+G_MODULE_EXPORT 			// Windows Mod
 CB_Edit_NumberFilter (GtkEditable *editable,
                   const gchar *text,
                   gint        length,
@@ -858,11 +871,13 @@ drawingAreaMouseButton(GtkWidget *widget, GdkEvent *event, tGlobal *pGlobal, gbo
 
 }
 
+G_MODULE_EXPORT 			// Windows Mod
 void CB_DrawingArea_Plot_A_MouseButton(GtkWidget *widget, GdkEvent *event, tGlobal *pGlobal)
 {
 	drawingAreaMouseButton( widget, event, pGlobal, TRUE );
 }
 
+G_MODULE_EXPORT 			// Windows Mod
 void CB_DrawingArea_Plot_B_MouseButton(GtkWidget *widget, GdkEvent *event, tGlobal *pGlobal)
 {
 	drawingAreaMouseButton( widget, event, pGlobal, FALSE );
@@ -899,6 +914,7 @@ SensitizeWidgets ( tGlobal *pGlobal ) {
  * \param  wCalibration pointer to radio button widget
  * \param  tGlobal	    pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_Radio_Calibration ( GtkRadioButton *wCalibration, tGlobal *pGlobal ) {
 
@@ -949,6 +965,7 @@ CB_Radio_Calibration ( GtkRadioButton *wCalibration, tGlobal *pGlobal ) {
  * \param  wTrace pointer to radio button widget
  * \param  tGlobal	    pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_Radio_Trace ( GtkRadioButton *wTrace, tGlobal *pGlobal ) {
 
@@ -1005,6 +1022,7 @@ CB_Radio_Trace ( GtkRadioButton *wTrace, tGlobal *pGlobal ) {
  * \param  tGlobal	    pointer global data
  */
 void
+G_MODULE_EXPORT 			// Windows Mod
 CB_EditableProjectName( GtkEditable *wEditable, tGlobal *pGlobal ) {
 	gchar *pProjectName = gtk_editable_get_chars( wEditable, 0, -1 ); // and allocated string
 	g_free(pGlobal->sProject);
@@ -1019,6 +1037,7 @@ CB_EditableProjectName( GtkEditable *wEditable, tGlobal *pGlobal ) {
 }
 
 void
+G_MODULE_EXPORT 			// Windows Mod
 CB_ComboProjectSelect( GtkComboBoxText *wComboBoxProject, tGlobal *pGlobal ) {
 	gint n = gtk_combo_box_get_active( GTK_COMBO_BOX( wComboBoxProject ));
     GtkWidget *wCalCombo =
@@ -1063,6 +1082,7 @@ CB_ComboProjectSelect( GtkComboBoxText *wComboBoxProject, tGlobal *pGlobal ) {
  * \param  wCalSelection      pointer to GtkComboBox widget
  * \param  tGlobal	          pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_ComboBoxCalibrationProfileName (GtkComboBoxText *wCalSelection, tGlobal *pGlobal) {
     gchar *sCalProfileName = NULL;
@@ -1088,6 +1108,7 @@ CB_ComboBoxCalibrationProfileName (GtkComboBoxText *wCalSelection, tGlobal *pGlo
  * \param  wTraceSelection    pointer to GtkComboBox widget
  * \param  tGlobal	          pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_ComboBoxTraceProfileName (GtkComboBoxText *wTraceSelection, tGlobal *pGlobal) {
 	tProjectAndName *pProjectAndName;
@@ -1116,6 +1137,7 @@ CB_ComboBoxTraceProfileName (GtkComboBoxText *wTraceSelection, tGlobal *pGlobal)
  * \param  wEditable    pointer to GtkCheckBoxText widget
  * \param  tGlobal	    pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_EditableCalibrationProfileName( GtkEditable *wEditable, tGlobal *pGlobal ) {
 
@@ -1163,6 +1185,7 @@ CB_EditableCalibrationProfileName( GtkEditable *wEditable, tGlobal *pGlobal ) {
  * \param  wEditable    pointer to GtkCheckBoxText widget
  * \param  tGlobal	    pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_EditableTraceProfileName( GtkEditable *wEditable, tGlobal *pGlobal ) {
     GtkWidget *wTraceNote = g_hash_table_lookup(pGlobal->widgetHashTable,
@@ -1212,6 +1235,7 @@ CB_EditableTraceProfileName( GtkEditable *wEditable, tGlobal *pGlobal ) {
  * \param  tGlobal	    pointer global data
  */
 void
+G_MODULE_EXPORT 			// Windows Mod
 CB_RadioBtn_ScreenPlot (GtkRadioButton *wRadioBtn, tGlobal *pGlobal) {
 	pGlobal->HP8753.flags.bShowHPGLplot = gtk_toggle_button_get_active( GTK_TOGGLE_BUTTON( wRadioBtn ));
 	gtk_widget_queue_draw(GTK_WIDGET(g_hash_table_lookup ( pGlobal->widgetHashTable, (gconstpointer)"WID_DrawingArea_Plot_A")));
@@ -1238,6 +1262,7 @@ CB_RadioBtn_ScreenPlot (GtkRadioButton *wRadioBtn, tGlobal *pGlobal) {
  * \param  tGlobal	      pointer global data
  */
 void
+G_MODULE_EXPORT 			// Windows Mod
 CB_Notebook_Select( GtkNotebook *wNotebook,   GtkWidget* wPage,
 		  guint nPage, tGlobal *pGlobal ) {
 	if( nPage == 0 ) {

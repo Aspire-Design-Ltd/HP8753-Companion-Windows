@@ -36,6 +36,7 @@
  * \param  tGlobal	           pointer global data
  */
 void
+G_MODULE_EXPORT 			// Windows Mod
 CB_ComboBoxCalKitSelection (GtkComboBoxText *wCalKitProfile, tGlobal *pGlobal) {
 	GtkLabel *wCalKitDescription = GTK_LABEL(
 			g_hash_table_lookup ( pGlobal->widgetHashTable, (gconstpointer)"WID_Lbl_CalKitDescription") );
@@ -55,6 +56,7 @@ CB_ComboBoxCalKitSelection (GtkComboBoxText *wCalKitProfile, tGlobal *pGlobal) {
  * \param  tGlobal	    pointer global data
  */
 void
+G_MODULE_EXPORT 			// Windows Mod
 CB_ReadXKT (GtkButton *wButton, tGlobal *pGlobal)
 {
     GtkWidget *dialog;
@@ -130,6 +132,7 @@ CB_ReadXKT (GtkButton *wButton, tGlobal *pGlobal)
  * \param  tGlobal	    pointer global data
  */
 void
+G_MODULE_EXPORT 			// Windows Mod
 CB_BtnDeleteCalKit (GtkButton * button, tGlobal *pGlobal)
 {
 	GtkComboBoxText *wCombo;
@@ -205,6 +208,7 @@ CB_BtnDeleteCalKit (GtkButton * button, tGlobal *pGlobal)
  * \param  tGlobal	    pointer global data
  */
 void
+G_MODULE_EXPORT 			// Windows Mod
 CB_BtnSendCalKit(GtkButton *wButton, tGlobal *pGlobal) {
 	gint index;
 	gchar *sLabel;
@@ -231,6 +235,7 @@ CB_BtnSendCalKit(GtkButton *wButton, tGlobal *pGlobal) {
  * \param  tGlobal	    pointer global data
  */
 void
+G_MODULE_EXPORT 			// Windows Mod
 CB_ChkUserCalKit(GtkCheckButton *wChkButton, tGlobal *pGlobal) {
 	pGlobal->flags.bSaveUserKit = gtk_toggle_button_get_active( GTK_TOGGLE_BUTTON( wChkButton ) );
 }

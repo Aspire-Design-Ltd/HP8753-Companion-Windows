@@ -109,6 +109,7 @@ SensitizeDR_OKbtn( tGlobal *pGlobal ) {
  * \param wEditable     GtkEditable widget from the GtkEdit widget
  * \param pGlobal       pointer to global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_DR_ToNameChanged (GtkEditable* wEditable, tGlobal *pGlobal)
 {
@@ -150,6 +151,7 @@ keepProjectListUpdated( const gchar *possiblyNewProject, tGlobal *pGlobal ) {
  * \param response      code returned from the OK or Cancel buttons
  * \param pGlobal       pointer to global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_DR_RenameResponse( GtkDialog *wDialog, int response, tGlobal *pGlobal ) {
     GtkEntry *wEntryTo = GTK_ENTRY(
@@ -448,6 +450,7 @@ setFromName( tGlobal *pGlobal ) {
  * \param purposeButton widget for button that has changed
  * \param pGlobal       pointer to global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_DR_RadioPurpose(GtkToggleButton *purposeButton, tGlobal *pGlobal) {
 
@@ -507,6 +510,7 @@ CB_DR_RadioPurpose(GtkToggleButton *purposeButton, tGlobal *pGlobal) {
  * \param targetButton  widget for button that has changed
  * \param pGlobal       pointer to global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_DR_RadioTarget(GtkToggleButton *targetButton, tGlobal *pGlobal) {
 

@@ -53,6 +53,7 @@ void setUseGPIBcardNoAndPID( tGlobal *pGlobal, gboolean bPID ) {
  * \param  tGlobal	    pointer global data
  */
 void
+G_MODULE_EXPORT 			// Windows Mod
 CB_Toggle_UseGPIB_SlotAndID (GtkToggleButton* wToggle, tGlobal *pGlobal) {
  	pGlobal->flags.bGPIB_UseCardNoAndPID = gtk_toggle_button_get_active( wToggle);
 	setUseGPIBcardNoAndPID( pGlobal, pGlobal->flags.bGPIB_UseCardNoAndPID );
@@ -68,6 +69,7 @@ CB_Toggle_UseGPIB_SlotAndID (GtkToggleButton* wToggle, tGlobal *pGlobal) {
  * \param  wEditable    pointer to analyze learn string button widget
  * \param  tGlobal	    pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CP_Entry_GPIBname_HP8753 (GtkEditable* wEditable, tGlobal *pGlobal)
 {
@@ -85,6 +87,7 @@ CP_Entry_GPIBname_HP8753 (GtkEditable* wEditable, tGlobal *pGlobal)
  * \param  wSpin      pointer to analyze learn string button widget
  * \param  tGlobal	    pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_Spin_GPIBcontrollerCard (GtkSpinButton* wSpin, tGlobal *pGlobal) {
 	pGlobal->GPIBcontrollerIndex = (gint)gtk_spin_button_get_value( wSpin );
@@ -100,6 +103,7 @@ CB_Spin_GPIBcontrollerCard (GtkSpinButton* wSpin, tGlobal *pGlobal) {
  * \param  wSpin      pointer to analyze learn string button widget
  * \param  tGlobal	    pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_Spin_GPIB_HP8753_PID (GtkSpinButton* wSpin, tGlobal *pGlobal) {
 	pGlobal->GPIBdevicePID = (gint)gtk_spin_button_get_value( wSpin );

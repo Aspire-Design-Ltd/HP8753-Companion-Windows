@@ -29,6 +29,8 @@
 
 #include "messageEvent.h"
 
+
+
 #ifdef DEPRECATED	// Use async read / write GPIB calls
 /*!     \brief  Write (possibly) binary data to the GPIB device
  *
@@ -560,7 +562,7 @@ gpointer
 threadGPIB(gpointer _pGlobal) {
     tGlobal *pGlobal = (tGlobal*) _pGlobal;
 
-    gchar *sGPIBversion = NULL;
+    gchar *sGPIBversion = "Windows version 0";		// Windows Mod
     gint verMajor, verMinor, verMicro;
     gint GPIBstatus;
     gint timeoutHP8753;   				// previous timeout
@@ -573,7 +575,8 @@ threadGPIB(gpointer _pGlobal) {
 
     // The HP8753 formats numbers like 3.141 not, the continental European way 3,14159
     setlocale(LC_NUMERIC, "C");
-    ibvers(&sGPIBversion);
+// Windows Mod, change no ibvers in  national instruments
+    //    ibvers(&sGPIBversion);
     LOG(G_LOG_LEVEL_CRITICAL, sGPIBversion);
     if( sGPIBversion && sscanf( sGPIBversion, "%d.%d.%d", &verMajor, &verMinor, &verMicro ) == 3  ) {
         pGlobal->GPIBversion = verMajor * 10000 + verMinor * 100 + verMicro;

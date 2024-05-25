@@ -156,8 +156,8 @@ openOrCreateDB(void) {
 	gint i, rtn = ERROR;
 	struct stat sb;
 	gboolean bProblem = FALSE;
-	gchar *DBdir = g_strdup_printf("%s/.local/share/hp8753c", getenv("HOME"));
-	gchar *DBfile = g_strdup_printf("%s/hp8753c.db", DBdir);
+	gchar *DBdir = g_strdup_printf("%s\\hp8753c", getenv("APPDATA"));		// Windows Mod
+	gchar *DBfile = g_strdup_printf("%s\\hp8753c.db", DBdir);				// Windows Mod
 
 	do {
 		if ((rc = sqlite3_initialize()) != SQLITE_OK) {
@@ -166,7 +166,7 @@ openOrCreateDB(void) {
 		}
 
 		if (stat(DBdir, &sb) != 0 || !S_ISDIR(sb.st_mode)) {
-			mkdir(DBdir, S_IRWXU);
+			_mkdir(DBdir);		// Windows Mod, S_IRWXU);
 		}
 
 		if ( (rc = sqlite3_open_v2(DBfile,

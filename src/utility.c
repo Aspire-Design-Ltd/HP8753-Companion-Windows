@@ -29,7 +29,7 @@
 #include <glib-2.0/glib.h>
 #include <hp8753.h>
 #include <math.h>
-#include <sys/utsname.h>
+//#include <sys/utsname.h>			// Windows Mod
 #include <errno.h>
 
 // This factor defines the "curviness". Play with it!
@@ -141,25 +141,27 @@ pointInLine(tLine line, gdouble frac) {
  return C;
 }
 
+// Windows Mod, ctl1 is defined in mingw windows.h as a dialog numerical constant. Renamed tComplex variables to tc_*
+
 // De Casteljau's algorithm
 tComplex
 bezierInterpolate(
-    tComplex pt0,  tComplex pt1, 
-    tComplex ctl0, tComplex ctl1, gdouble fr ) {
+    tComplex tc_pt0,  tComplex tc_pt1,
+    tComplex tc_ctl0, tComplex tc_ctl1, gdouble fr ) {
 
     tComplex point1, point2, point3, point4, point5;
     tLine lineP0C0, lineC0C1, lineC1P1, line4, line5, line6;
 
     // see https://en.wikipedia.org/wiki/File:B%C3%A9zier_3_big.gif
 
-    lineP0C0.A = pt0;
-    lineP0C0.B = ctl0;
+    lineP0C0.A = tc_pt0;
+    lineP0C0.B = tc_ctl0;
     point1 = pointInLine(lineP0C0, fr);
-    lineC0C1.A = ctl0;
-    lineC0C1.B = ctl1;
+    lineC0C1.A = tc_ctl0;
+    lineC0C1.B = tc_ctl1;
     point2 = pointInLine(lineC0C1, fr);
-    lineC1P1.A = ctl1;
-    lineC1P1.B = pt1;
+    lineC1P1.A = tc_ctl1;
+    lineC1P1.B = tc_pt1;
     point3 = pointInLine(lineC1P1, fr);
 
     line4.A = point1;
@@ -293,7 +295,7 @@ doubleToStringWithSpaces( gdouble value, gchar *sUnits ) {
 
 void
 logVersion(void) {
-
+	/*  Windows Mod
     struct utsname UTSbuffer;
 
     errno = 0;
@@ -305,6 +307,7 @@ logVersion(void) {
             UTSbuffer.sysname, UTSbuffer.nodename,
             UTSbuffer.release, UTSbuffer.version,
             UTSbuffer.machine);
+*/
     LOG( G_LOG_LEVEL_INFO, "HP8753 Companion version: %s", VERSION );
 
     return;

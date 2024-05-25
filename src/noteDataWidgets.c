@@ -120,6 +120,7 @@ BtnSXP (GtkButton *wButton, tGlobal *pGlobal, gboolean S2PnotS1P )
  * \param  wButton  file pointer to the open, writable file
  * \param  pGlobal  pointer to data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_BtnS2P (GtkButton *wButton, tGlobal *pGlobal)
 {
@@ -135,6 +136,7 @@ CB_BtnS2P (GtkButton *wButton, tGlobal *pGlobal)
  * \param  wButton  file pointer to the open, writable file
  * \param  pGlobal  pointer to data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_BtnS1P (GtkButton *wButton, tGlobal *pGlobal)
 {
@@ -217,6 +219,7 @@ writeCSVpoint( FILE *file, tFormat format, tComplex *point, gboolean bLF ) {
 }
 
 void
+G_MODULE_EXPORT 			// Windows Mod
 CB_BtnSaveCSV (GtkButton *wButton, tGlobal *pGlobal)
 {
     GtkWidget *dialog;

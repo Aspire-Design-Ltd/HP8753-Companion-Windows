@@ -34,6 +34,7 @@
  * \param  wCkButton      pointer to analyze learn string button widget
  * \param  tGlobal	    pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_ChkBtn_ShowDateTime (GtkCheckButton *wCkButton, tGlobal *pGlobal) {
 		pGlobal->flags.bShowDateTime = gtk_toggle_button_get_active( GTK_TOGGLE_BUTTON( wCkButton ) );
@@ -48,6 +49,7 @@ CB_ChkBtn_ShowDateTime (GtkCheckButton *wCkButton, tGlobal *pGlobal) {
  * \param  wCkButton      pointer to analyze learn string button widget
  * \param  tGlobal	    pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_ChkBtn_SmithGBnotRX (GtkCheckButton *wCkButton, tGlobal *pGlobal) {
 	pGlobal->flags.bAdmitanceSmith = gtk_toggle_button_get_active( GTK_TOGGLE_BUTTON( wCkButton ) );
@@ -64,6 +66,7 @@ CB_ChkBtn_SmithGBnotRX (GtkCheckButton *wCkButton, tGlobal *pGlobal) {
  * \param  wCkButton      pointer to analyze learn string button widget
  * \param  tGlobal	    pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_ChkBtn_DeltaMarkerActual (GtkCheckButton *wCkButton, tGlobal *pGlobal) {
 	pGlobal->flags.bDeltaMarkerZero = !gtk_toggle_button_get_active( GTK_TOGGLE_BUTTON( wCkButton ) );
@@ -80,6 +83,7 @@ CB_ChkBtn_DeltaMarkerActual (GtkCheckButton *wCkButton, tGlobal *pGlobal) {
  * \param  wCkButton      pointer to analyze learn string button widget
  * \param  tGlobal	    pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_ChkBtn_DoNotRetrieveHPGL(GtkCheckButton *wCheckBtn, tGlobal *pGlobal) {
 	pGlobal->flags.bDoNotRetrieveHPGLdata = gtk_toggle_button_get_active( GTK_TOGGLE_BUTTON( wCheckBtn ) );
@@ -92,6 +96,7 @@ CB_ChkBtn_DoNotRetrieveHPGL(GtkCheckButton *wCheckBtn, tGlobal *pGlobal) {
  * \param  wButton      pointer to analyze learn string button widget
  * \param  tGlobal	    pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_Btn_AnalyzeLS( GtkButton *wBtnAnalyzeLS, tGlobal *pGlobal ) {
 	sensitiseControlsInUse( pGlobal, FALSE );
@@ -105,6 +110,7 @@ CB_Btn_AnalyzeLS( GtkButton *wBtnAnalyzeLS, tGlobal *pGlobal ) {
  * \param  wButton      pointer to analyze learn string button widget
  * \param  tGlobal	    pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_ChkBtn_Spline (GtkCheckButton *wButton, tGlobal *pGlobal)
 {
@@ -122,6 +128,7 @@ CB_ChkBtn_Spline (GtkCheckButton *wButton, tGlobal *pGlobal)
  * \param  wButton      pointer to analyze learn string button widget
  * \param  tGlobal      pointer global data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_ChkBtn_ShowHPlogo (GtkCheckButton *wButton, tGlobal *pGlobal)
 {

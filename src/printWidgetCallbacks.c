@@ -39,6 +39,7 @@
 #define PNG_WIDTH	3300
 #define PNG_HEIGHT	2550
 #define PNG_MARGIN  0.0
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_BtnSavePNG (GtkButton * button, tGlobal *pGlobal)
 {
@@ -166,6 +167,7 @@ tPaperDimensions paperDimensions[ eNumPaperSizes ] = {
  * \param  wButton  file pointer to the open, writable file
  * \param  pGlobal	pointer to data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_BtnSavePDF (GtkButton * button, tGlobal *pGlobal)
 {
@@ -361,6 +363,7 @@ CB_PrintRequestPageSetup(GtkPrintOperation* printOp,
  * \param  wButton  button widget
  * \param  pGlobal  pointer to data
  */
+G_MODULE_EXPORT 			// Windows Mod
 void
 CB_BtnMPrint (GtkButton *wButton, tGlobal *pGlobal)
 {

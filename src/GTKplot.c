@@ -990,6 +990,7 @@ gboolean plotA (guint areaWidth, guint areaHeight, gdouble margin, cairo_t *cr, 
  * \param pGlobal	pointer to the global data structure
  * \return			FALSE
  */
+G_MODULE_EXPORT 			// Windows Mod
 gboolean CB_DrawingArea_A_Draw (GtkWidget *widget, cairo_t *cr, tGlobal *pGlobal)
 {
 
@@ -1071,6 +1072,7 @@ gboolean plotB (guint areaWidth, guint areaHeight, gdouble margin, cairo_t *cr, 
  * \param pGlobal	pointer to the global data structure
  * \return			FALSE
  */
+G_MODULE_EXPORT 			// Windows Mod
 gboolean
 CB_DrawingArea_B_Draw (GtkWidget *widget, cairo_t *cr, tGlobal *pGlobal)
 {
@@ -1094,6 +1096,7 @@ CB_DrawingArea_B_Draw (GtkWidget *widget, cairo_t *cr, tGlobal *pGlobal)
  * \param pGlobal	pointer to the global data structure
  * \return			FALSE
  */
+G_MODULE_EXPORT 			// Windows Mod
 gboolean CB_DrawingArea_A_MouseAction(GtkWidget *widget, GdkEvent *event, tGlobal *pGlobal) {
 	GdkEventMotion* e;
 	GdkEventCrossing* ec;
@@ -1133,6 +1136,7 @@ gboolean CB_DrawingArea_A_MouseAction(GtkWidget *widget, GdkEvent *event, tGloba
  * \param pGlobal	pointer to the global data structure
  * \return			FALSE
  */
+G_MODULE_EXPORT 			// Windows Mod
 gboolean
 CB_DrawingArea_B_MouseAction(GtkWidget *widget,  GdkEvent *event, tGlobal *pGlobal) {
 	GdkEventMotion* e;
