@@ -29,7 +29,6 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.mingw.exe.debug.option.optimization.level.952964454" name="Optimization Level" superClass="gnu.c.compiler.mingw.exe.debug.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option defaultValue="gnu.c.debugging.level.max" id="gnu.c.compiler.mingw.exe.debug.option.debugging.level.1532571629" name="Debug Level" superClass="gnu.c.compiler.mingw.exe.debug.option.debugging.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.1959296730" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\msys64\mingw64\include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\msys64\mingw64\include\gtk-3.0&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\msys64\mingw64\include\glib-2.0&quot;"/>
@@ -41,6 +40,7 @@
 									<listOptionValue builtIn="false" value="&quot;C:\msys64\mingw64\include\graphene-1.0&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\msys64\mingw64\lib\graphene-1.0\include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\msys64\mingw64\include\atk-1.0&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/include}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.2069263260" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>

@@ -22,7 +22,7 @@ NOTE: the GTK port for windows insists that you have a base directory and the ex
 
 Note Eclipse will compile the executable into the "debug" directory. You need to copy this compiled code into the "bin" directory where you can debug the the code using the GDB debugger.
 
-FINALLY. To connect to your VNA you need to click the '+' then '-' on the GPIB PID box and then click the 'Use Card Index and ID' click box.
+FINALLY. To connect to your VNA you need to click the 'Use Card Index and ID' click box.
 
 The 'Analyze Learn String' does not work.
 

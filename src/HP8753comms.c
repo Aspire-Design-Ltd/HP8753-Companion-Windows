@@ -968,7 +968,7 @@ acquireHPGLplot( gint descGPIB_HP8753, tGlobal *pGlobal, gint *pGPIBstatus ) {
             // copy remainder (possibly only a partial) to the buffer to be
             // added to on the next read
             if( max > 0 )
-                strcpy( sHPGL, tokens[max-1] );
+            	strcpy( sHPGL, tokens[max-1] );
             g_strfreev(tokens);
         }
         postInfoWithCount( "Received %d HPGL instructions", nTokens, 0 );
