@@ -6,7 +6,7 @@ To run the code you will find a executable in the bin directory. You need to dow
 
 You also need to install the National Instruments drivers (https://www.ni.com/en/support/downloads/drivers/download.ni-488-2.html#484357). The driver used for testing was the oldest 17.6 version to ensure it worked with the older USB interfaces.
 
-This has been tested using the GPIB-USB-HS interface with a HP8753ES VNA.
+This has been tested using the GPIB-USB-HS, GPIB-USB-B interfaces with a HP8753ES VNA.
 
 
 To build the code you will need:
